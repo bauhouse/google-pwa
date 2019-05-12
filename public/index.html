@@ -219,6 +219,7 @@
         navigator.serviceWorker.register('/service-worker.js')
             .then((reg) => {
               console.log('Service worker registered.', reg);
+              return cache.addAll(FILES_TO_CACHE);
             });
       });
     }
